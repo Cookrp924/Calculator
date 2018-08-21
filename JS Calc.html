@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>JS Calculator</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link rel="stylesheet" href="jscalc.css">
+</head>
+<body>
+
+	<div class="col-4 offset-4 container calculator">
+		<div class="row answer">
+			<span id="result">0</span>
+		</div>
+		<div class="row">
+			<button class="btn btn-danger" id="allClear">AC</button>
+			<button class="btn btn-danger" id="clrEntry">CE</button>
+			<button class="btn btn-danger exec" id="divide" value="D">/</button>
+			<button class="btn btn-danger exec" id="mult" value="M">X</button>
+		</div>
+		<div class="row">
+			<button class="btn btn-danger num" id="seven" value=7>7</button>
+			<button class="btn btn-danger num" id="eight" value=8>8</button>
+			<button class="btn btn-danger num" id="nine" value=9>9</button>
+			<button class="btn btn-danger exec" id="minus" value="S">-</button>
+		</div>
+		<div class="row">
+			<button class="btn btn-danger num" id="four" value=4>4</button>
+			<button class="btn btn-danger num" id="five" value=5>5</button>
+			<button class="btn btn-danger num" id="six" value=6>6</button>
+			<button class="btn btn-danger exec" id="plus" value="A">+</button>
+		</div>
+		<div class="row">
+			<button class="btn btn-danger num" id="one" value=1>1</button>
+			<button class="btn btn-danger num" id="two" value=2>2</button>
+			<button class="btn btn-danger num" id="three" value=3>3</button>
+			<button class="btn btn-danger" id="equals">=</button>
+		</div>
+		<div class="row">
+			<button class="btn btn-danger num" id="zero" value=0>0</button>
+			<button class="btn btn-danger num" id="dec" value=".">.</button>
+		</div>
+	</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script type="text/javascript" src="jscalc.js"></script>
+</body>
+</html>
