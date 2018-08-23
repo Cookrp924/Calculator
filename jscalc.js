@@ -21,14 +21,20 @@ allClear.addEventListener("click", function(){
 })
 
 clrEntry.addEventListener("click", function(){
-	execFunc = "";
-	if(num2.length === 0){
+	//execFunc = "";
+	if(num1.length > 0){
 		num1 = [];
 		result = 0;
 		resultText.textContent = 0;
+		eqText.textContent = 0;
 	}
-	num2 = [];
-	resultText.textContent = num1;
+	if(num1.length == null){
+		num2 = [];
+		resultText.textContent = num1;
+		eqText.textContent = num1 + " " + execFunc;
+	}
+	//num2 = [];
+	//resultText.textContent = 0
 	console.log("cleared entry");
 })
 
@@ -42,7 +48,7 @@ for(i = 0; i < numbers.length; i++){
 		}else{
 			num2.push(this.value);
 			resultText.textContent = num2.join("");
-			eqText.textContent = num1 + " " + execFunc + " " + num2;
+			eqText.textContent = num1 + " " + execFunc + " " + num2.join("");
 			console.log(num2);
 		}
 	})
@@ -54,10 +60,9 @@ for(i = 0; i < exec.length; i++){
 		console.log(this.value);
 		if(num1.length > 0){
 			num1 = Number(num1.join(""));
-			//eqText.textContent = num1 + " " + execFunc;
 			console.log(num1);
-		}else if(num1.length == null){
-			//eqText.textContent = num1 + " " + execFunc;
+		}else if(num1.length === 0){
+			num1 = 0;
 			console.log(num1);
 		}
 		if(num2.length > 0){
@@ -108,7 +113,6 @@ function operator(){
 	num1 = result;
 	num2 = [];
 }
-
 
 
 
