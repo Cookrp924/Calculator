@@ -39,7 +39,8 @@ clrEntry.addEventListener("click", function(){
 	if(num1.length == null){
 		num2 = [];
 		resultText.textContent = num1;
-		eqText.textContent = num1 + " " + execFunc;
+		execFunc === "";
+		eqText.textContent = num1
 	}
 	console.log("cleared entry");
 })
@@ -66,21 +67,23 @@ for(i = 0; i < exec.length; i++){
 	exec[i].addEventListener("click", function(){
 		execFunc = this.value;
 		console.log(this.value);
+		switchNum = 2;
+		console.log("switchNum=" + switchNum);
 		if(num1.length > 0){
 			num1 = Number(num1.join(""));
-			switchNum++;
-			console.log(switchNum);
+			//switchNum++;
+			//console.log("switchNum=" + switchNum);
 			console.log(num1);
 		}else if(num1.length === 0){
 			num1 = 0;
-			switchNum++;
-			console.log(switchNum);
+			//switchNum++;
+			//console.log("switchNum=" + switchNum);
 			console.log(num1);
 		}
 		if(num2.length > 0){
 			num2 = Number(num2.join(""));
-			switchNum--;
-			console.log(switchNum);
+			//switchNum--;
+			//console.log("switchNu=" + switchNum);
 			operator();
 		}
 		eqText.textContent = num1 + " " + execFunc;
@@ -89,11 +92,16 @@ for(i = 0; i < exec.length; i++){
 
 //'equals' num2 is joined and operator function runs
 equals.addEventListener("click", function(){
+	if(num1.length > 0){
+		num1 = [];
+		return;
+	}
 	if(num2.length > 0){
 		num2 = Number(num2.join(""));
 		console.log(num2);
 	}
 	operator();
+	switchNum = 1;
 })
 
 //switch statements performs equation based on chosen operator
@@ -102,30 +110,27 @@ function operator(){
 		case "+":
 			console.log(num1 + num2);
 			result = Number(num1) + Number(num2);
-			resultText.textContent = result;
-			eqText.textContent = result;
 			break;
 		case "-":
 			console.log(num1 - num2);
 			result = Number(num1) - Number(num2);
-			resultText.textContent = result;
-			eqText.textContent = result;
 			break;
 		case "x":
 			console.log(num1 * num2);
 			result = num1 * num2;
-			resultText.textContent = result;
-			eqText.textContent = result;
 			break;
 		case "/":
 			console.log(num1 / num2);
 			result = num1 / num2;
-			resultText.textContent = result;
-			eqText.textContent = result;
 			break;
 		default:
 			break;
 	}
+	if(result > 9999999999){
+		result = "Data Limit";
+	}
+	resultText.textContent = result;
+	eqText.textContent = result;
 	num1 = result;
 	num2 = [];
 }
@@ -150,6 +155,7 @@ neg.addEventListener("click", function(){
 //if switchNum = 1, num1 is being manipulated; if switchNum = 2, then num2
 //negSwitch assigned a value denoting positive(0) or negative(1) value
 function negPos(){
+	console.log("switchNum=" + switchNum)
 	switch(switchNum){
 		//num1 being manipulated
 		case 1:
@@ -194,6 +200,5 @@ function negPos(){
 			break;
 	}
 }
-
 
 
