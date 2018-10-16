@@ -9,42 +9,45 @@
 </head>
 <body>
 
-	<div class="col-4 offset-4 container calculator">
-		<div class="row answer">
-			<span id="result">0</span>
+	<div class="innerCalc">
+		<p>JavaScript Calculator</p>
+		<div class="numDisplay">
+			<div>
+				<span id="result">0</span>
+			</div>
+			<div>
+				<span id="equation">0</span>
+			</div>
 		</div>
-		<div class="row">
-			<span id="equation">0</span>
+		<div class="calcKeys">
+			<button class="btn btn-danger btn-lg" id="allClear">AC</button>
+			<button class="btn btn-danger btn-lg" id="clrEntry">CE</button>
+			<button class="btn btn-danger btn-lg exec" id="divide" value="/">/</button>
+			<button class="btn btn-danger btn-lg exec" id="mult" value="x">X</button>
 		</div>
-		<div class="row">
-			<button class="btn btn-danger" id="allClear">AC</button>
-			<button class="btn btn-danger" id="clrEntry">CE</button>
-			<button class="btn btn-danger exec" id="divide" value="/">/</button>
-			<button class="btn btn-danger exec" id="mult" value="x">X</button>
+		<div class="calcKeys">
+			<button class="btn btn-danger btn-lg num" id="seven" value=7>7</button>
+			<button class="btn btn-danger btn-lg num" id="eight" value=8>8</button>
+			<button class="btn btn-danger btn-lg num" id="nine" value=9>9</button>
+			<button class="btn btn-danger btn-lg exec" id="minus" value="-">-</button>
 		</div>
-		<div class="row">
-			<button class="btn btn-danger num" id="seven" value=7>7</button>
-			<button class="btn btn-danger num" id="eight" value=8>8</button>
-			<button class="btn btn-danger num" id="nine" value=9>9</button>
-			<button class="btn btn-danger exec" id="minus" value="-">-</button>
+		<div class="calcKeys">
+			<button class="btn btn-danger btn-lg num" id="four" value=4>4</button>
+			<button class="btn btn-danger btn-lg num" id="five" value=5>5</button>
+			<button class="btn btn-danger btn-lg num" id="six" value=6>6</button>
+			<button class="btn btn-danger btn-lg exec" id="plus" value="+">+</button>
 		</div>
-		<div class="row">
-			<button class="btn btn-danger num" id="four" value=4>4</button>
-			<button class="btn btn-danger num" id="five" value=5>5</button>
-			<button class="btn btn-danger num" id="six" value=6>6</button>
-			<button class="btn btn-danger exec" id="plus" value="+">+</button>
+		<div class="calcKeys">
+			<button class="btn btn-danger btn-lg num" id="one" value=1>1</button>
+			<button class="btn btn-danger btn-lg num" id="two" value=2>2</button>
+			<button class="btn btn-danger btn-lg num" id="three" value=3>3</button>
 		</div>
-		<div class="row">
-			<button class="btn btn-danger num" id="one" value=1>1</button>
-			<button class="btn btn-danger num" id="two" value=2>2</button>
-			<button class="btn btn-danger num" id="three" value=3>3</button>
-			<button class="btn btn-danger" id="equals">=</button>
+		<div class="calcKeys">
+			<button class="btn btn-danger btn-lg num" id="zero" value=0>0</button>
+			<button class="btn btn-danger btn-lg num" id="dec" value=".">.</button>
+			<button class="btn btn-danger btn-lg" id="neg">+/-</button>
 		</div>
-		<div class="row">
-			<button class="btn btn-danger num" id="zero" value=0>0</button>
-			<button class="btn btn-danger num" id="dec" value=".">.</button>
-			<button class="btn btn-danger num" id="neg" value="-">+/-</button>
-		</div>
+		<button class="btn btn-danger btn-lg" id="equals">=</button>
 	</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
