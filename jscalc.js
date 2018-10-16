@@ -126,7 +126,7 @@ function operator(){
 		default:
 			break;
 	}
-	if(result > 9999999999){
+	if(result > 999999999){
 		result = "Data Limit";
 	}
 	resultText.textContent = result;
