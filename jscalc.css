@@ -12,7 +12,7 @@ body {
 }
 
 p {
-	font-size: 200%;
+	font-size: 220%;
 	text-align: center;
 	color: #067c16;
 }
@@ -46,6 +46,7 @@ p {
 	margin-bottom: 3%;
 	width: 3.42em;
 	height: 3em;
+	box-shadow: 1px 2px #282828;
 
 }
 
