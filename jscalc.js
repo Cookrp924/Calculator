@@ -5,7 +5,7 @@ var numbers = document.getElementsByClassName("num");
 var exec = document.getElementsByClassName("exec");
 var neg = document.getElementById("neg");
 var negSwitch = 0; //used for switching b/t pos & neg numbers
-var switchNum = 1; //differentiates b/t num1 & num2 when using +/-
+var switchNum = 1; //differentiates b/t num1 & num2 for purpose of using +/-
 var dec = document.getElementById("dec");
 var execFunc = ""; //the chosen operator
 var num1 = [];
@@ -24,6 +24,9 @@ allClear.addEventListener("click", function(){
 	eqText.textContent = 0
 	dec.style.pointerEvents = "auto";
 	console.log("cleared " + num1 + " " + num2);
+	for(i = 0; i < numbers.length; i++){
+		numbers[i].style.pointerEvents = "auto";
+	}
 })
 
 //clear entry
@@ -53,14 +56,26 @@ for(i = 0; i < numbers.length; i++){
 			resultText.textContent = num1.join("");
 			eqText.textContent = num1.join("");
 			console.log(num1);
+			console.log(num1.length);
+			if(num1.length === 10){
+				for(i = 0; i < numbers.length; i++){
+					numbers[i].style.pointerEvents = "none";
+				}
+			}
 		}else{
 			num2.push(this.value);
 			resultText.textContent = num2.join("");
 			eqText.textContent = num1 + " " + execFunc + " " + num2.join("");
 			console.log(num2);
+			if(num2.length === 10){
+				for(i = 0; i < numbers.length; i++){
+					numbers[i].style.pointerEvents = "none";
+				}
+			}
 		}
 	})
 }
+
 
 //selecting an operator 
 for(i = 0; i < exec.length; i++){
@@ -87,6 +102,9 @@ for(i = 0; i < exec.length; i++){
 			operator();
 		}
 		eqText.textContent = num1 + " " + execFunc;
+		for(i = 0; i < numbers.length; i++){
+			numbers[i].style.pointerEvents = "auto";
+		}
 	})
 }
 
